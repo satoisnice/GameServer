@@ -1,0 +1,12 @@
+This project follows a RESTful backend service that receives high volume batch events from online game servers. This service is designed to take in telemetry and server health data for monitoring and analytics. Events are sent in batches to reduce network load.
+
+Event types:
+1. Server Health Batch Events - Batches containing server CPU usage, memory usage, timestamps, and active player counts
+2. Player Telemetry Batch Events - Batches of player telemetry such as latency, session actions, player level, and timestamps.
+
+Peak Events:
+This service peaks during evenings, weekends, and during in-game promotions. During these periods, servers send frequent batch updates to reflect changing conditions.
+
+Users:
+- Game Servers: Automated systems that generate and send batch telemetry and health data
+- Monitoring and Analytics Systems: Internal services that consume the data for dashboards, alerting, and analytics.
