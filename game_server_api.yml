@@ -9,7 +9,7 @@ paths:
   /events/server-health:
     post:
       summary: Reports health of servers
-      operationId: app.server_health
+      operationId: app.report_server_health_readings
       description: Adds a batch of server statistics
       requestBody:
         content:
@@ -25,7 +25,7 @@ paths:
   /events/player-telemetry:
     post:
       summary: Reports batch of player telemetry
-      operationId: app.player_telemetry
+      operationId: app.report_player_telemetry_event
       description: Adds a batch of player telemetry
       requestBody:
         content:
@@ -86,7 +86,7 @@ components:
           example: "dc0a7a50-2795-43e3-b6c5-28b69aab1b5e" 
         server_location:
           type: string
-          example: "ca-west-1"
+          example: "Vancouver"
         active_players:
           type: integer
           description: Number of active players at moment of reading
